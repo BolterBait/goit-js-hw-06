@@ -1,25 +1,18 @@
-const listEl = document.querySelectorAll("ul#categories .item");
-console.log("Number of categories:", listEl.length);
+// const listEl = document.querySelectorAll("ul#categories .item");
+// console.log("Number of categories:", listEl.length);
 
-const titleEl = document.querySelectorAll("li.item");
-
-titleEl.forEach((item) => {
-  console.log(`Category:  ${item.querySelector("h2").textContent}`);
-  console.log(`Elements: ${item.querySelectorAll("ul > li").length}`);
-});
+// const titleEl = document.querySelectorAll("li.item");
 
 // titleEl.forEach((item) => {
-//   const category = item.textContent;
-//   console.log(`Category:  ${category}`);
+//   console.log(`Category:  ${item.querySelector("h2").textContent}`);
+//   console.log(`Elements: ${item.querySelectorAll("ul > li").length}`);
 // });
 
-// const listItemEl = document.querySelectorAll("li.item");
-// listItemEl.forEach((element) => {
-//   const elements = element.childElementCount;
-//   console.log(`Elements: ${elements}`);
-// });
-
-// item.querySelector("h2");
-// item.querySelectorAll("ul > li");
-// el.firstElementChild.textContent)
-// el.lastElementChild.children.length)
+const categoriesList = document.querySelector("#categories");
+// console.log(categoriesList);
+const categoriesEl = Array.from(categoriesList.children);
+console.log(`Number of categorias: ${categoriesEl.length}`);
+categoriesEl.map((element) =>
+  console.log(`Category: ${element.querySelector("h2").textContent}
+  Elements: ${element.querySelectorAll("li").length}`)
+);
